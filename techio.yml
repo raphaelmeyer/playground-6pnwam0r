@@ -1,4 +1,17 @@
 title: Introduction to cmake
+
 plan:
 - title: Welcome
   statement: markdowns/welcome.md
+- title: Build a library
+  statement: markdowns/lib_x.md
+- title: Interface library
+  statement: markdowns/interface_lib_catch.md
+- title: Build an executable
+  statement: markdowns/test_exe_x.md
+
+projects:
+  cpp:
+    root: /cmake-project
+    runner: raphaelmeyer/cmake3.10-clang6.0-runner:1.0.0
+
