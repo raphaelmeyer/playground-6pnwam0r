@@ -8,8 +8,8 @@ mkdir -p ${DIR}/build
 echo "! /project > cd build"
 cd ${DIR}/build
 
-echo "! /project/build > cmake .."
-cmake .. | sed 's/^/    /'
+echo "! /project/build > cmake -G Ninja .."
+cmake -G Ninja .. | sed 's/^/    /'
 
 echo "! /project/build > cd .."
 cd ${DIR}

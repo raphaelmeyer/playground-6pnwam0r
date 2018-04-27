@@ -13,5 +13,5 @@ plan:
 projects:
   cpp:
     root: /cmake-project
-    runner: raphaelmeyer/cmake3.10-clang6.0-runner:1.0.0
+    runner: raphaelmeyer/cmake3.10-clang6.0-runner:1.1.0
 
