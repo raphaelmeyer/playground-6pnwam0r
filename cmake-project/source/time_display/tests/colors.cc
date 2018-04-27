@@ -5,7 +5,8 @@
 namespace {
 
 TEST_CASE("there should be colors", "[display]" ) {
-  REQUIRE(true);
+  Colors const colors;
+  REQUIRE(colors.update());
 }
 
 }

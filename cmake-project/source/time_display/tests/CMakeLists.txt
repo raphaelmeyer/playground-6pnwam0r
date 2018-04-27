@@ -9,6 +9,7 @@ target_link_libraries(time_display-tests
   PRIVATE
     catchorg::catch2
     time_machine::time_display
+    time_machine::time_travel
 )
 
 target_include_directories(time_display-tests
@@ -18,4 +19,3 @@ target_include_directories(time_display-tests
 add_custom_target(run-time_display-tests ALL
   COMMAND time_display-tests
 )
-

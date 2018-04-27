@@ -5,7 +5,8 @@
 namespace {
 
 TEST_CASE("there should be numbers", "[display]" ) {
-  REQUIRE(true);
+  Numbers const numbers;
+  REQUIRE(numbers.update());
 }
 
 }
