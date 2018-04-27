@@ -10,3 +10,5 @@ target_link_libraries(flux_capacitor
   PUBLIC time_machine::time_travel
 )
 
+add_subdirectory(tests)
+
