@@ -1,5 +1,7 @@
 # Welcome!
 
+
+
 ```
  +---------------+           +----------------+
  | <<component>> |           | <<component>>  |
@@ -16,4 +18,6 @@
  | time_display  |        | time_travel_interface |
  +---------------+        +-----------------------+
 ```
+
+@[Test build]({"command": "source/build.sh"})
 
