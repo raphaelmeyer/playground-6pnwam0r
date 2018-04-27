@@ -2,12 +2,20 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo "! /project > mkdir -p build"
 mkdir -p ${DIR}/build
-cd ${DIR}/build
-cmake ..
 
+echo "! /project > cd build"
+cd ${DIR}/build
+
+echo "! /project/build > cmake .."
+cmake .. | sed 's/^/    /'
+
+echo "! /project/build > cd .."
 cd ${DIR}
-cmake --build ${DIR}/build
+
+echo "! /project > cmake --build build"
+cmake --build ${DIR}/build | sed 's/^/    /'
 
 echo "TECHIO> success true"
 
