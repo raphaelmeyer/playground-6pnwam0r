@@ -15,3 +15,5 @@ target_include_directories(time_display
   PUBLIC include
 )
 
+add_subdirectory(tests)
+
