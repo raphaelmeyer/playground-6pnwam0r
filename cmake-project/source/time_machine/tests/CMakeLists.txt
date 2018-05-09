@@ -7,6 +7,7 @@ target_link_libraries(time_machine-tests
   PRIVATE
     catchorg::catch2
     time_machine::time_machine
+    project::settings
 )
 
 target_include_directories(time_machine-tests

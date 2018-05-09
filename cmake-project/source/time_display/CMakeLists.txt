@@ -9,6 +9,7 @@ add_library(time_machine::time_display ALIAS time_display)
 target_link_libraries(time_display
   PRIVATE
     time_machine::time_travel
+    project::settings
 )
 
 target_include_directories(time_display
@@ -16,4 +17,3 @@ target_include_directories(time_display
 )
 
 add_subdirectory(tests)
-

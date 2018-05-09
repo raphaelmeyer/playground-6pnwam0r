@@ -10,6 +10,7 @@ target_link_libraries(time_display-tests
     catchorg::catch2
     time_machine::time_display
     time_machine::time_travel
+    project::settings
 )
 
 target_include_directories(time_display-tests

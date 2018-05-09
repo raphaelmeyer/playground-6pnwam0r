@@ -6,6 +6,7 @@ add_executable(time_machine::application ALIAS time_machine_app)
 target_link_libraries(time_machine_app
   PRIVATE
     time_machine::time_machine
+    project::settings
 )
 
 add_library(time_machine

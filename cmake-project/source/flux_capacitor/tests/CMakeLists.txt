@@ -9,6 +9,7 @@ target_link_libraries(flux_capacitor-tests
   PRIVATE
     catchorg::catch2
     time_machine::flux_capacitor
+    project::settings
 )
 
 target_include_directories(flux_capacitor-tests
@@ -18,4 +19,3 @@ target_include_directories(flux_capacitor-tests
 add_custom_target(run-flux_capacitor-tests ALL
   COMMAND flux_capacitor-tests
 )
-

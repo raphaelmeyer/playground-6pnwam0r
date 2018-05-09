@@ -8,6 +8,7 @@ add_library(time_machine::flux_capacitor ALIAS flux_capacitor)
 
 target_link_libraries(flux_capacitor
   PUBLIC time_machine::time_travel
+  PRIVATE project::settings
 )
 
 target_include_directories(flux_capacitor
