@@ -3,16 +3,17 @@
 #include "flux.h"
 #include "capacitor.h"
 
-bool FluxCapacitor::jump() const {
-  Capacitor const capacitor;
-  capacitor.charge();
+FluxCapacitor::FluxCapacitor()
+  : capacitor(std::make_unique<Capacitor const>())
+  , flux(std::make_unique<Flux const>())
+{}
 
-  return true;
+FluxCapacitor::~FluxCapacitor() {}
+
+bool FluxCapacitor::jump() const {
+  return capacitor->charge();
 }
 
 bool FluxCapacitor::activate() const {
-  Flux const flux;
-  flux.release();
-
-  return true;
+  return flux->release();
 }

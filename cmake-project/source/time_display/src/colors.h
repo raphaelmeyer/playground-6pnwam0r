@@ -3,4 +3,6 @@
 class Colors {
 public:
   bool update() const;
+
+private:
 };
