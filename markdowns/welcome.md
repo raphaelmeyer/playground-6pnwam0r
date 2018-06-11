@@ -1,6 +1,8 @@
 # Welcome!
 
+Let's say we have a small and simple piece of software to control a time machine. The main components are a flux capacitor and a time display.
 
+The software has the following architecture:
 
 ```
  +---------------+           +----------------+
@@ -19,5 +21,4 @@
  +---------------+        +-----------------------+
 ```
 
-@[Test build]({"command": "source/build.sh"})
-
+The component `time_machine` is the main controller. The `time_travel_interface` is implemented by the `flux_capacitor` and used by the `time_display`.
