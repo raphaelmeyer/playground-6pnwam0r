@@ -31,4 +31,4 @@ check_failure $?
 
 echo "TECHIO> success true"
 
-echo "TECHIO> terminal"
+echo "TECHIO> terminal -i /bin/bash"
