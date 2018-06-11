@@ -30,3 +30,5 @@ cmake --build ${DIR}/build | sed 's/^/    /'
 check_failure $?
 
 echo "TECHIO> success true"
+
+echo "TECHIO> terminal"
