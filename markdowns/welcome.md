@@ -58,3 +58,5 @@ project/
           +--- time_travel/
                +--- time_travel.h
 ```
+
+**Tip**: Do not forget to look at the [CMake documention](https://cmake.org/cmake/help/v3.10/) when you're stuck.
