@@ -2,9 +2,8 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-function check_failure()
-{
-  exit_code=$0
+function check_failure {
+  exit_code=$1
   if [ ${exit_code} -ne 0 ]; then
     echo "TECHIO> success false"
     exit ${exit_code}
