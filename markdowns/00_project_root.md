@@ -2,8 +2,36 @@
 
 The entry point for a CMake project is a file called `CMakeLists.txt`.
 
-Let's set up the main `CMakeLists.txt` in the project root folder.
+Let's set up the top level `CMakeLists.txt` in the project root folder.
+```
+project/
++--- CMakeLists.txt
++--- ...
+```
 
-You will need the following commands:
-- [`cmake_minimum_required`](https://cmake.org/cmake/help/v3.10/command/cmake_minimum_required.html)
-- [`project`](https://cmake.org/cmake/help/v3.10/command/project.html)
+The top level `CMakeLists.txt` should start with command [`cmake_minimum_required`](https://cmake.org/cmake/help/v3.10/command/cmake_minimum_required.html). For this exercise we will be using version `3.10`.
+
+Next is the [`project`](https://cmake.org/cmake/help/v3.10/command/project.html) command.
+Our time machine project should have version 1.0.2 and its language should be set to C++.
+
+@[Run CMake]({"stubs": ["00_project_root/CMakeLists.txt"], "command": "00_project_root/check.sh"})
+
+In order to build a CMake project we need a working directory for the build.
+In our example we use a folder `build` in the project folder.
+
+For project initialization you must change into the build folder.
+But you only need to initialize a build folder once.
+
+```
+# create the build folder
+mkdir -p /project/build
+
+# for initialization we must change into the build folder
+cd /project/build
+cmake -G Ninja /project
+
+# build the project
+cmake --build /project/build
+```
+
+The option `-G` of the [`cmake`](https://cmake.org/cmake/help/v3.10/manual/cmake.1.html) command line tool sets the [`generator`](https://cmake.org/cmake/help/v3.10/manual/cmake-generators.7.html).
