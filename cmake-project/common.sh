@@ -17,7 +17,7 @@ function check_failure {
 
 function run_cmake {
   project_dir=$1
-  build_dir=${project_dir}/build_dir
+  build_dir=${project_dir}/build
 
   set -o pipefail
 
