@@ -14,12 +14,11 @@ if ! grep -q "add_subdirectory" CMakeLists.txt ; then
   fail 1 "Add folder time_travel_interface to the project."
 fi
 
-if ! grep -q "time_travel_interface" ; then
-  fail 1 "Add folder time_travel_interface to the project."
-fi
-
 
 cp -r "${DIR}/../project/sources/." "${DIR}/project/"
+
+echo -e "\n\ninclude(usage_check.cmake)\n" >> "${DIR}/project/CMakeLists.txt"
 run_cmake ${DIR}/project
+
 
 echo "TECHIO> success true"

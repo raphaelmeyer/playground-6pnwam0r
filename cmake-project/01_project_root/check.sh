@@ -30,4 +30,5 @@ fi
 echo -e "\n\ninclude(usage_check.cmake)\n" >> "${DIR}/project/CMakeLists.txt"
 run_cmake ${DIR}/project
 
+
 echo "TECHIO> success true"
