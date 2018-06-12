@@ -5,6 +5,10 @@ plan:
   statement: markdowns/welcome.md
 - title: CMake Project File
   statement: markdowns/01_project_root.md
+- title: Add an interface library
+  statement: markdowns/02_interface_lib.md
+- title: Resources
+  statement: markdowns/xx_end.md
 
 projects:
   cpp:
