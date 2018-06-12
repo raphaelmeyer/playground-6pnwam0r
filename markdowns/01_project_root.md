@@ -14,7 +14,7 @@ The top level `CMakeLists.txt` must start with command [`cmake_minimum_required`
 Next is the [`project`](https://cmake.org/cmake/help/v3.10/command/project.html) command.
 Our time machine project should be named **TimeMachine**, should have version **1.0.2** and its language should be set to **C++**.
 
-@[Run CMake]({"stubs": ["00_project_root/CMakeLists.txt"], "command": "00_project_root/check.sh"})
+@[Run CMake]({"stubs": ["01_project_root/CMakeLists.txt"], "command": "01_project_root/check.sh"})
 
 In order to build a CMake project we need a working directory for the build.
 In our example we use a folder `build` in the project folder.
