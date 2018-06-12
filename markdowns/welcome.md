@@ -24,7 +24,7 @@ The component `time_machine` is the main controller. The `time_travel_interface`
 
 The source code is organized in the following file structure:
 ```
-project/
+[project]/
 +--- flux_capacitor/
 |    +--- include/
 |    |    +--- flux_capacitor/
