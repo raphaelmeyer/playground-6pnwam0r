@@ -1,4 +1,4 @@
-if(NOT "${PROJECT_NAME}" STREQUAL "TimeMachiner")
+if(NOT "${PROJECT_NAME}" STREQUAL "TimeMachine")
   message(FATAL_ERROR "Project name should be TimeMachine")
 endif()
 
