@@ -4,4 +4,4 @@
 
 [Using  Modern  CMakePatterns  to  Enforce  a  Good  Modular  Design](https://www.youtube.com/watch?v=eC9-iRN2b04) by Mathieu Ropert
 
-[Embracing  Modern CMake](https://steveire.wordpress.com/2017/11/05/embracing-modern-cmake/Resources) by Stephen  Kelly
+[Embracing  Modern CMake](https://steveire.wordpress.com/2017/11/05/embracing-modern-cmake/) by Stephen  Kelly

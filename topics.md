@@ -1,23 +1,23 @@
 # Topics
 
-  cmake_minimum_required
-project
+  [x] cmake_minimum_required
+[x] project
 
-add_subdirectory
+[] add_subdirectory
 
-add_executable
-add_library
+[] add_executable
+[] add_library
 
-INTERFACE, PUBLIC, PRIVATE
+[] INTERFACE, PUBLIC, PRIVATE
 
-ALIAS, namespaces
+[] ALIAS, namespaces
 
-target_link_libraries
-target_include_directories
+[] target_link_libraries
+[] target_include_directories
 
-target_compile_features
-target_compile_options
-target_compile_definitions
+[] target_compile_features
+[] target_compile_options
+[] target_compile_definitions
 
 # General
 
