@@ -4,9 +4,11 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "${DIR}/../common.sh"
 
-cd ${DIR}
+cd ${DIR}/project
 
-# pre check with grep
+if ! grep "add_subdirectory" CMakeLists.txt | grep -q -E "time_travel_interface" ; then
+  fail 1 "Folder time_travel_interface is not added to the project."
+fi
 
 cp -r "${DIR}/../project/sources/." "${DIR}/project/"
 
