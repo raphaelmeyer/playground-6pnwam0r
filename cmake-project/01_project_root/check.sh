@@ -4,10 +4,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "${DIR}/../common.sh"
 
-set -o pipefail
-
-run_cmake
-
 cd ${DIR}
 
 if ! grep "cmake_minimum_required" CMakeLists.txt | grep -q -E "VERSION[[:space:]]*3.10" ; then
@@ -25,5 +21,7 @@ fi
 if ! grep "project" CMakeLists.txt | grep -q -E "LANGUAGES[[:space:]]*\\\"*CXX\\\"*" ; then
   fail 1 "Project language is not set to C++."
 fi
+
+run_cmake ${DIR}
 
 echo "TECHIO> success true"

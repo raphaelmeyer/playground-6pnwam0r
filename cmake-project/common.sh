@@ -16,20 +16,25 @@ function check_failure {
 }
 
 function run_cmake {
-  echo "! $(pwd) > mkdir -p ${DIR}/build"
-  mkdir -p ${DIR}/build
+  project_dir=$1
+  build_dir=${project_dir}/build_dir
 
-  echo "! $(pwd) > cd ${DIR}/build"
-  cd ${DIR}/build
+  set -o pipefail
 
-  echo "! $(pwd) > cmake -G Ninja ${DIR}"
-  cmake -G Ninja ${DIR} | sed 's/^/    /'
+  echo "! $(pwd) > mkdir -p ${build_dir}"
+  mkdir -p ${build_dir}
+
+  echo "! $(pwd) > cd ${build_dir}"
+  cd ${build_dir}
+
+  echo "! $(pwd) > cmake -G Ninja ${project_dir}"
+  cmake -G Ninja ${project_dir} | sed 's/^/    /'
   check_failure $?
 
-  echo "! $(pwd) > cd ${DIR}"
-  cd ${DIR}
+  echo "! $(pwd) > cd ${project_dir}"
+  cd ${project_dir}
 
-  echo "! $(pwd) > cmake --build ${DIR}/build"
-  cmake --build ${DIR}/build | sed 's/^/    /'
+  echo "! $(pwd) > cmake --build ${build_dir}"
+  cmake --build ${build_dir} | sed 's/^/    /'
   check_failure $?
 }
