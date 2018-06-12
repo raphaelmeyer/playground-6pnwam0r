@@ -1,6 +1,6 @@
 # Time travel interface library
 
-A Cmake project 
+A Cmake project
 
 A library is added with command [add_library](https://cmake.org/cmake/help/v3.10/command/add_library.html).
 It is good practice to add an [alias target](https://cmake.org/cmake/help/v3.10/command/add_library.html#alias-libraries) for the library.
@@ -27,4 +27,4 @@ The library shall provide include path `include` to its dependers by using comma
                +--- time_travel.h
 ```
 
-@[Run CMake]({"stubs": ["02_interface_lib/CMakeLists.txt", "02_interface_lib/time_travel_interface/CMakeLists.txt"], "command": "02_interface_lib/check.sh"})
+@[Run CMake]({"stubs": ["02_interface_lib/project/CMakeLists.txt", "02_interface_lib/project/time_travel_interface/CMakeLists.txt"], "command": "02_interface_lib/check.sh"})
