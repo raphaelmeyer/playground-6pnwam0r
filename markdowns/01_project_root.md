@@ -2,7 +2,7 @@
 
 The entry point for a CMake project is a file called `CMakeLists.txt`.
 
-## Exercise
+## Exercise 1
 
 Let's set up the top level `CMakeLists.txt` in the project root folder.
 ```

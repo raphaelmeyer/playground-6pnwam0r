@@ -1,4 +1,4 @@
-# Time travel interface library
+# Time Travel Interface Library
 
 A CMake project is typically organized as a tree in a folder structure.
 With command [`add_subdirectory`](https://cmake.org/cmake/help/v3.10/command/add_subdirectory.html) a `CMakeLists.txt` adds a sub-folders to the project.
@@ -14,7 +14,7 @@ add_library(apple INTERFACE)
 add_library(fruit::apple ALIAS apple)
 ```
 
-## Exercise
+## Exercise 2
 
 Add an interface library called `time_travel` and with an alias `time_machine::time_travel`.
 The library is in sub-folder `time_travel_interface`.
