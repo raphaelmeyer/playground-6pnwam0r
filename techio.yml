@@ -4,9 +4,9 @@ plan:
 - title: Welcome
   statement: markdowns/welcome.md
 - title: CMake Project File
-  statement: markdowns/00_project_root.md
+  statement: markdowns/01_project_root.md
 
 projects:
   cpp:
-    root: /cmake-project
+    root: /cmake
     runner: raphaelmeyer/cmake3.10-clang6.0-runner:1.1.0
