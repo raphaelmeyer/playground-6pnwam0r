@@ -16,6 +16,9 @@ plan:
 - title: Flux Capacitor Library
   statement: markdowns/03_flux_cap_lib.md
 
+- title: Flux Capacitor Library (Solution)
+  statement: markdowns/03_solution.md
+
 - title: Flux Capacitor Tests
   statement: markdowns/04_flux_cap_tests.md
 
