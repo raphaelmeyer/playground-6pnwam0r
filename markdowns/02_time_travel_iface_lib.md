@@ -24,10 +24,11 @@ The library shall provide the include path `include` to its dependers by using c
 [project]/
 +--- CMakeLists.txt
 +--- time_travel_interface/
-     +--- CMakeLists.txt
-     +--- include/
-          +--- time_travel/
-               +--- time_travel.h
+|    +--- CMakeLists.txt
+|    +--- include/
+|         +--- time_travel/
+|              +--- time_travel.h
++--- ...
 ```
 
 @[Run CMake]({"stubs": ["02_interface_lib/stubs/CMakeLists.txt", "02_interface_lib/stubs/time_travel_interface/CMakeLists.txt"], "command": "02_interface_lib/check.sh"})
