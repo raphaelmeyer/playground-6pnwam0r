@@ -10,6 +10,6 @@ cd ${DIR}
 
 cp -r "${DIR}/../project/sources/." "${DIR}/project/"
 
-run_cmake ${DIR}
+run_cmake ${DIR}/project
 
 echo "TECHIO> success true"

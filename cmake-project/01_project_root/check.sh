@@ -22,6 +22,6 @@ if ! grep "project" CMakeLists.txt | grep -q -E "LANGUAGES[[:space:]]*\\\"*CXX\\
   fail 1 "Project language is not set to C++."
 fi
 
-run_cmake ${DIR}
+run_cmake ${DIR}/project
 
 echo "TECHIO> success true"
