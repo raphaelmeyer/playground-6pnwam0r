@@ -38,6 +38,6 @@ cmake -G Ninja /project
 cmake --build /project/build
 ```
 
-The option `-G` of the [`cmake`](https://cmake.org/cmake/help/v3.10/manual/cmake.1.html) command line tool sets the [`generator`](https://cmake.org/cmake/help/v3.10/manual/cmake-generators.7.html).
+The option `-G` of the [`cmake`](https://cmake.org/cmake/help/v3.10/manual/cmake.1.html) command line tool sets the [generator](https://cmake.org/cmake/help/v3.10/manual/cmake-generators.7.html).
 There are generators for different build systems like make or ninja.
 Also, there are generators to create projects for IDEs like eclipse or visual studio.
