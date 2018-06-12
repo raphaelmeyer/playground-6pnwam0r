@@ -9,7 +9,7 @@ project/
 +--- ...
 ```
 
-The top level `CMakeLists.txt` should start with command [`cmake_minimum_required`](https://cmake.org/cmake/help/v3.10/command/cmake_minimum_required.html). For this exercise we will be using version `3.10`.
+The top level `CMakeLists.txt` must start with command [`cmake_minimum_required`](https://cmake.org/cmake/help/v3.10/command/cmake_minimum_required.html). For this exercise we will be using CMake version `3.10`.
 
 Next is the [`project`](https://cmake.org/cmake/help/v3.10/command/project.html) command.
 Our time machine project should be named **TimeMachine**, should have version **1.0.2** and its language should be set to **C++**.

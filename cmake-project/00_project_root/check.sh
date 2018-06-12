@@ -2,31 +2,28 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-function check_failure {
-  exit_code=$1
-  if [ ${exit_code} -ne 0 ]; then
-    echo "TECHIO> success false"
-    exit ${exit_code}
-  fi
-}
+source "${DIR}/../common.sh"
 
 set -o pipefail
 
-echo "! $(pwd) > mkdir -p ${DIR}/build"
-mkdir -p ${DIR}/build
+run_cmake
 
-echo "! $(pwd) > cd ${DIR}/build"
-cd ${DIR}/build
-
-echo "! $(pwd) > cmake -G Ninja ${DIR}"
-cmake -G Ninja ${DIR} | sed 's/^/    /'
-check_failure $?
-
-echo "! $(pwd) > cd ${DIR}"
 cd ${DIR}
 
-echo "! $(pwd) > cmake --build ${DIR}/build"
-cmake --build ${DIR}/build | sed 's/^/    /'
-check_failure $?
+if ! grep "cmake_minimum_required" CMakeLists.txt | grep -q -E "VERSION[[:space:]]*3.10" ; then
+  fail 1 "Required minimum CMake version 3.10 is missing."
+fi
+
+if ! grep "project" CMakeLists.txt | grep -q -E "TimeMachine" ; then
+  fail 1 "Project \"TimeMachine\" is not defined."
+fi
+
+if ! grep "project" CMakeLists.txt | grep -q -E "VERSION[[:space:]]*1.0.2" ; then
+  fail 1 "Project version is not set to 1.0.2."
+fi
+
+if ! grep "project" CMakeLists.txt | grep -q -E "LANGUAGES[[:space:]]*\\\"*CXX\\\"*" ; then
+  fail 1 "Project language is not set to C++."
+fi
 
 echo "TECHIO> success true"
