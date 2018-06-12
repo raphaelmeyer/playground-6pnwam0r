@@ -17,6 +17,7 @@ add_library(fruit::apple ALIAS apple)
 ## Exercise
 
 Add an interface library called `time_travel` and with an alias `time_machine::time_travel`.
+The library is in sub-folder `time_travel_interface`.
 The library shall provide the include path `include` to its dependers by using command [`target_include_directories`](https://cmake.org/cmake/help/v3.10/command/target_include_directories.html).
 
 ```
