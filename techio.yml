@@ -8,5 +8,5 @@ plan:
 
 projects:
   cpp:
-    root: /cmake
+    root: /cmake-project
     runner: raphaelmeyer/cmake3.10-clang6.0-runner:1.1.0
