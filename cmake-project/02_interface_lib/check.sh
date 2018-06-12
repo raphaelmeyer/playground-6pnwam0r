@@ -6,9 +6,14 @@ source "${DIR}/../common.sh"
 
 cd ${DIR}/project
 
-if ! grep "add_subdirectory" CMakeLists.txt | grep -q -E "time_travel_interface" ; then
-  fail 1 "Folder time_travel_interface is not added to the project."
+if ! grep -q "add_subdirectory" CMakeLists.txt ; then
+  fail 1 "Add folder time_travel_interface to the project."
 fi
+
+if ! grep -q "time_travel_interface" ; then
+  fail 1 "Add folder time_travel_interface to the project."
+fi
+
 
 cp -r "${DIR}/../project/sources/." "${DIR}/project/"
 

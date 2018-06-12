@@ -6,21 +6,23 @@ source "${DIR}/../common.sh"
 
 cd ${DIR}/project
 
-if ! grep "cmake_minimum_required" CMakeLists.txt | grep -q -E "VERSION[[:space:]]*3.10" ; then
-  fail 1 "Minimum requirement for CMake version 3.10 is missing."
+if ! grep -q "cmake_minimum_required" CMakeLists.txt ; then
+  fail 1 "Minimum version requirement for CMake is missing."
 fi
 
-if ! grep "project" CMakeLists.txt | grep -q -E "TimeMachine" ; then
-  fail 1 "Project \"TimeMachine\" is not defined."
+if ! grep -q -E "VERSION[[:space:]]*3.10" ; then
+  fail 1 "Minimum version requirement for CMake should be 3.10."
 fi
 
-if ! grep "project" CMakeLists.txt | grep -q -E "VERSION[[:space:]]*1.0.2" ; then
-  fail 1 "Project version is not set to 1.0.2."
+if ! grep -q "project" CMakeLists.txt ; then
+  fail 1 "Project is not defined."
 fi
 
-if ! grep "project" CMakeLists.txt | grep -q -E "LANGUAGES[[:space:]]*\\\"*CXX\\\"*" ; then
-  fail 1 "Project language is not set to C++."
+if ! grep -q -E "LANGUAGES[[:space:]]*\\\"*CXX\\\"*" ; then
+  fail 1 "Project language should be set to C++."
 fi
+
+echo "\n\ninclude(usage_check)\n" >> "${DIR}/project/CMakeLists.txt"
 
 run_cmake ${DIR}/project
 
