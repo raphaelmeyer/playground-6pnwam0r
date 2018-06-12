@@ -1,2 +1,3 @@
-add_subdirectory(catch2)
+# [project]/vendor/CMakeLists.txt
 
+add_subdirectory(catch2)

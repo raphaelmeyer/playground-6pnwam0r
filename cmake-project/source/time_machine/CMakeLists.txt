@@ -1,3 +1,5 @@
+# [project]/time_machine/CMakeLists.txt
+
 add_executable(time_machine_app
   src/main.cc
 )

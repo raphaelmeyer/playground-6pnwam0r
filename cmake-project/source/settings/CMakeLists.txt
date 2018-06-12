@@ -1,3 +1,5 @@
+# [project]/settings/CMakeLists.txt
+
 add_library(settings INTERFACE)
 add_library(project::settings ALIAS settings)
 
