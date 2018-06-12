@@ -3,7 +3,11 @@
 
 #include <memory>
 
+class Foo {};
+
 void foo() {
-  auto ptr = std::make_unique<FluxCapacitor>();
-  ptr->jump();
+  FluxCapacitor const flux_capacitor;
+  flux_capacitor.jump();
+
+  auto dummy = std::make_unique<Foo>();
 }
