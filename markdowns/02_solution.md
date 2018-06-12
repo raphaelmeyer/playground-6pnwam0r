@@ -45,5 +45,5 @@ In addition to CMake commands [`target_compile_features`](https://cmake.org/cmak
 from the example, there is also a command
 [`target_compile_definitions`](https://cmake.org/cmake/help/v3.10/command/target_compile_definitions.html).
 
-**Attention**: Only define compiler flags if you have a really good reason.
+> **Attention**: Only define compiler flags if you have a really good reason.
 Adding compiler flags will break the portability and compatibility of your project.
