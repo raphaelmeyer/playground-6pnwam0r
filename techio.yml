@@ -5,8 +5,22 @@ plan:
   statement: markdowns/welcome.md
 - title: CMake Project File
   statement: markdowns/01_project_root.md
-- title: Add an interface library
-  statement: markdowns/02_interface_lib.md
+- title: Time travel interface library
+  statement: markdowns/02_time_travel_iface_lib.md
+- title: Flux capacitor add_library
+  statement: markdowns/03_flux_cap_lib.md
+- title: Flux capacitor tests
+  statement: markdowns/04_flux_cap_tests.md
+- title: Time display add_library
+  statement: markdowns/05_time_disp_lib.md
+- title: Time display tests
+  statement: markdowns/06_time_disp_tests.md
+- title: Time machine library
+  statement: markdowns/07_time_machine_lib.md
+- title: Time machine tests
+  statement: markdowns/08_time_machine_tests.md
+- title: Time machine executable
+  statement: markdowns/09_time_machine_exe.md
 - title: Resources
   statement: markdowns/xx_end.md
 
