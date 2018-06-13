@@ -19,5 +19,5 @@ target_include_directories(flux_capacitor-tests
 )
 
 add_custom_target(run-flux_capacitor-tests ALL
-  COMMAND flux_capacitor-tests
+  COMMAND tests::flux_capacitor
 )

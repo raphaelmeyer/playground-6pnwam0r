@@ -17,5 +17,5 @@ target_include_directories(time_machine-tests
 )
 
 add_custom_target(run-time_machine-tests ALL
-  COMMAND time_machine-tests
+  COMMAND tests::time_machine
 )

@@ -65,5 +65,4 @@ Also, don't forget to add the `project::settings` as a **private** dependency.
 
 The `include` folder is a **public** include directory.
 
-
 @[Run CMake]({"stubs": ["03_flux_cap_lib/stubs/CMakeLists.txt", "03_flux_cap_lib/stubs/flux_capacitor/CMakeLists.txt"], "command": "03_flux_cap_lib/check.sh"})

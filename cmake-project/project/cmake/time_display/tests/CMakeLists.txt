@@ -20,5 +20,5 @@ target_include_directories(time_display-tests
 )
 
 add_custom_target(run-time_display-tests ALL
-  COMMAND time_display-tests
+  COMMAND tests::time_display
 )
