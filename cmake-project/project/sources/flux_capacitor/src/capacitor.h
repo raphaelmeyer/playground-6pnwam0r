@@ -2,5 +2,5 @@
 
 class Capacitor {
 public:
-  bool charge() const;
+  bool charge(double capacity) const;
 };

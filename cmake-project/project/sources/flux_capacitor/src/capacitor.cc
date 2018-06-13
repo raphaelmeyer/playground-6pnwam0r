@@ -1,5 +1,5 @@
 #include "capacitor.h"
 
-bool Capacitor::charge() const {
-  return true;
+bool Capacitor::charge(double capacity) const {
+  return capacity < 0.0;
 }
