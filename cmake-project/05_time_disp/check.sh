@@ -18,7 +18,7 @@ run_cmake ${DIR}/project
 cd ${DIR}/project
 out=$(cmake --build ${DIR}/project/build --target run-time_display-tests 2>&1)
 if [[ ! "${out}" =~ "All tests passed (7 assertions in 5 test cases)" ]] ; then
-  fail 1 "No or not all tests were not run."
+  fail 1 "No or not all tests ran."
 fi
 
 
