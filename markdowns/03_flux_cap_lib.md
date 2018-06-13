@@ -35,14 +35,6 @@ target_link_libraries(apple
 Add library `flux_capacitor` to the project.
 As usual also add an alias target named `time_machine::flux_capacitor`.
 
-The library is implementing the `time_travel` interface.
-It is used by the library and also part of its own public interface.
-So the `time_travel` interface is a **public** dependency.
-
-Also, don't forget to add the `project::settings` as a **private** dependency.
-
-The `include` folder is a **public** include directory.
-
 ::: Folder structure
 ```
 [project]/
@@ -62,5 +54,16 @@ The `include` folder is a **public** include directory.
 +--- ...
 ```
 :::
+
+The library has three source files: `src/capacitor.cc`, `src/flux.cc` and `src/flux_capacitor.cc`.
+
+The library is implementing the `time_travel` interface.
+It is used by the library and also part of its own public interface.
+So the `time_travel` interface is a **public** dependency.
+
+Also, don't forget to add the `project::settings` as a **private** dependency.
+
+The `include` folder is a **public** include directory.
+
 
 @[Run CMake]({"stubs": ["03_flux_cap_lib/stubs/CMakeLists.txt", "03_flux_cap_lib/stubs/flux_capacitor/CMakeLists.txt"], "command": "03_flux_cap_lib/check.sh"})
