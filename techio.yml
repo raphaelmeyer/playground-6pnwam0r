@@ -28,6 +28,9 @@ plan:
 - title: Time machine executable
   statement: markdowns/09_time_machine_exe.md
 
+- title: Functions
+  statement: markdowns/0x_functions.md
+
 - title: Resources
   statement: markdowns/xx_end.md
 
