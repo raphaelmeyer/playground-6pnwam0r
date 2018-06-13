@@ -26,7 +26,8 @@ run_cmake ${DIR}/project
 cd ${DIR}/project
 out=$(cmake --build {DIR}/project/build --target run-flux_capacitor-tests 2>&1)
 if [[ ! "${out}" =~ "All tests passed (5 assertions in 3 test cases)" ]] ; then
-  fail 1 "Test were not run."
+  echo "TECHIO> message -c DEBUG ${out}"
+  fail 1 "No or not all tests were not run."
 fi
 
 
