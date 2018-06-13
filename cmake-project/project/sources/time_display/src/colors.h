@@ -8,5 +8,5 @@ class Green {};
 
 class Colors {
 public:
-  bool update(std::variant<Red, Yellow, Green> color) const;
+  bool update(std::variant<Red, Yellow, Green> const & color) const;
 };
