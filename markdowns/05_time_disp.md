@@ -7,11 +7,11 @@ Now, we are going to add the time display library to project, including the test
 Add the time display library to the project in the same way as the flux capacitor library.
 Include the tests as well.
 
-Library name: `time_display`
-Library alias: `time_machine::time_display`
-Test executable: `time_display-tests`
-Test alias: `tests::time_display`
-Test runner target: `run-time_display-tests`
+- Library name: `time_display`
+- Library alias: `time_machine::time_display`
+- Test executable: `time_display-tests`
+- Test alias: `tests::time_display`
+- Test runner target: `run-time_display-tests`
 
 ::: Folder structure
 ```
