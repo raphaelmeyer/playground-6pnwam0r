@@ -9,8 +9,27 @@ Both commands support the keywords `PRIVATE`, `PUBLIC` and `INTERFACE` to specif
 - `PUBLIC` Needed by me and my dependants.
 - `INTERFACE` Not needed by me, but by my dependants only.
 
-Build targets that have source files should always list the files explicitly.
-Using mechanism like file globing does not only 12555
+> **Attention**: Build targets that have source files should always list the files explicitly.
+Using a mechanism like file globing hides dependencies and prevents the build tools from correctly resolve build dependencies.
+
+::: Example
+```
+add_library(apple
+  src/apple.cc
+  src/peel.cc
+)
+add_library(fruit::apple ALIAS apple)
+
+target_include_directories(apple
+  PUBLIC include
+)
+
+target_link_libraries(apple
+  PRIVATE fruit::seeds
+  PUBLIC fruit::edible
+)
+```
+:::
 
 ## Exercise 3
 
