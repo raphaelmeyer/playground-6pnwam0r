@@ -34,7 +34,7 @@ plan:
 - title: Time machine executable
   statement: markdowns/06_time_machine_exe.md
 
-- title: Time machine executable
+- title: Time machine executable (Solution)
   statement: markdowns/06_solution.md
 
 - title: Functions
