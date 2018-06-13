@@ -31,10 +31,10 @@ plan:
 - title: Time Display Library (Solution)
   statement: markdowns/05_solution.md
 
-- title: Time machine executable
+- title: Time Machine Executable
   statement: markdowns/06_time_machine_exe.md
 
-- title: Time machine executable (Solution)
+- title: Time Machine Executable (Solution)
   statement: markdowns/06_solution.md
 
 - title: Functions
