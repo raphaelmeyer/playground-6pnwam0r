@@ -3,8 +3,6 @@
 
 #include <memory>
 
-class Foo {};
-
 void bar(TimeTravel const & time_travel) {
   time_travel.jump();
 }
@@ -12,4 +10,6 @@ void bar(TimeTravel const & time_travel) {
 void foo() {
   FluxCapacitor const flux_capacitor;
   bar(flux_capacitor);
+
+  flux_capacitor.activate();
 }
