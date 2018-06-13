@@ -4,6 +4,14 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "${DIR}/../common.sh"
 
+
+cd ${DIR}/project
+
+if ! grep -q "add_subidrectory" flux_capacitor/CMakeLists.txt ; then
+  fail 1 "Did you add sub-folder tests to the project?"
+fi
+
+
 rm -rf ${DIR}/project
 cp -r "${DIR}/stubs" "${DIR}/project"
 cp -r "${DIR}/../project/sources/." "${DIR}/project/"
@@ -20,5 +28,6 @@ out=$(cmake --build {DIR}/project/build --target run-flux_capacitor-tests 2>&1)
 if [[ ! "${out}" =~ "All tests passed (5 assertions in 3 test cases)" ]] ; then
   fail 1 "Test were not run."
 fi
+
 
 echo "TECHIO> success true"
