@@ -14,7 +14,7 @@ cp -r "${DIR}/../project/cmake/time_travel_interface" "${DIR}/project/"
 
 cd ${DIR}/project
 
-if ! grep -q "add_subidrectory" flux_capacitor/CMakeLists.txt ; then
+if ! grep -q "add_subdirectory" flux_capacitor/CMakeLists.txt ; then
   fail 1 "Did you add sub-folder tests to the project?"
 fi
 
