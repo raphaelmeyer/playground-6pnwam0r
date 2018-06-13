@@ -3,13 +3,13 @@
 
 #include <memory>
 
-void bar(TimeTravel const & time_travel) {
+void foo(TimeTravel const & time_travel) {
   time_travel.jump();
 }
 
-void foo() {
+int main() {
   FluxCapacitor const flux_capacitor;
-  bar(flux_capacitor);
+  foo(flux_capacitor);
 
   flux_capacitor.activate();
 }
