@@ -2,7 +2,7 @@
 
 Command [`target_link_libraries`](https://cmake.org/cmake/help/v3.10/command/target_link_libraries.html) is used to specify dependencies.
 Requirements for include directories are defined with
-command [`target_include_directories`](https://cmake.org/cmake/help/v3.10/command/target_include_directories.html).
+command [`target_include_directories`](https://cmake.org/cmake/help/v3.10/command/target_include_directories.html) as seen before.
 
 Both commands support the keywords `PRIVATE`, `PUBLIC` and `INTERFACE` to specify the usage requirements:
 - `PRIVATE` Needed by me, but not my dependants.
@@ -12,7 +12,7 @@ Both commands support the keywords `PRIVATE`, `PUBLIC` and `INTERFACE` to specif
 > **Attention**: Build targets that have source files should always list the files explicitly.
 Using a mechanism like file globing hides dependencies and prevents the build tools from correctly resolve build dependencies.
 
-::: Example
+**Example**:
 ```
 add_library(apple
   src/apple.cc
@@ -29,7 +29,6 @@ target_link_libraries(apple
   PUBLIC fruit::edible
 )
 ```
-:::
 
 ## Exercise 3
 

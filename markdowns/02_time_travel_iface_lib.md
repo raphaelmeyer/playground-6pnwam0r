@@ -8,7 +8,7 @@ A library is added with command [`add_library`](https://cmake.org/cmake/help/v3.
 It is good practice to add an [alias target](https://cmake.org/cmake/help/v3.10/command/add_library.html#alias-libraries) for the library.
 The name of the alias library should use a namespace.
 
-Example:
+**Example**:
 ```
 add_library(apple INTERFACE)
 add_library(fruit::apple ALIAS apple)
