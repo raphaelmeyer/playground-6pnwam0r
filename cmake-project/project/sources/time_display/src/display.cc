@@ -15,7 +15,9 @@ Display::~Display() {}
 bool Display::update(TimeTravel const & time_travel) const {
   time_travel.jump();
 
-  colors->update();
+  std::variant<Red, Yellow, Green> yellow = Yellow{};
+
+  colors->update(yellow);
   numbers->update();
 
   return true;

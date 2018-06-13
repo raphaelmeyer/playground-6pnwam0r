@@ -1,8 +1,12 @@
 #pragma once
 
+#include <variant>
+
+class Red {};
+class Yellow {};
+class Green {};
+
 class Colors {
 public:
-  bool update() const;
-
-private:
+  bool update(std::variant<Red, Yellow, Green> const color) const;
 };
