@@ -5,9 +5,11 @@
 
 class Foo {};
 
+void bar(TimeTravel const & time_travel) {
+  time_travel.jump();
+}
+
 void foo() {
   FluxCapacitor const flux_capacitor;
-  flux_capacitor.jump();
-
-  auto dummy = std::make_unique<Foo>();
+  bar(flux_capacitor);
 }

@@ -9,9 +9,21 @@ Both commands support the keywords `PRIVATE`, `PUBLIC` and `INTERFACE` to specif
 - `PUBLIC` Needed by me and my dependants.
 - `INTERFACE` Not needed by me, but by my dependants only.
 
+Build targets that have source files should always list the files explicitly.
+Using mechanism like file globing does not only 12555
+
 ## Exercise 3
 
+Add library `flux_capacitor` to the project.
+As usual also add an alias target named `time_machine::flux_capacitor`.
 
+The library is implementing the `time_travel` interface.
+It is used by the library and also part of its own public interface.
+So the `time_travel` interface is a **public** dependency.
+
+Also, don't forget to add the `project::settings` as a **private** dependency.
+
+The `include` folder is a **public** include directory.
 
 ::: Folder structure
 ```
