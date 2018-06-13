@@ -30,7 +30,7 @@ The source code is organized in the following file structure:
 |    |    +--- flux_capacitor/
 |    |         +--- flux_capacitor.h
 |    +--- src/
-|         +--- capacitor.cpp
+|         +--- capacitor.cc
 |         +--- capacitor.h
 |         +--- flux_capacitor.cc
 |         +--- flux.cc

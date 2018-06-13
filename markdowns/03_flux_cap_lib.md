@@ -53,7 +53,7 @@ The `include` folder is a **public** include directory.
 |    |    +--- flux_capacitor/
 |    |         +--- flux_capacitor.h
 |    +--- src/
-|         +--- capacitor.cpp
+|         +--- capacitor.cc
 |         +--- capacitor.h
 |         +--- flux_capacitor.cc
 |         +--- flux.cc
