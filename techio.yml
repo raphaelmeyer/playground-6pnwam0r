@@ -22,17 +22,32 @@ plan:
 - title: Flux Capacitor Tests
   statement: markdowns/04_flux_cap_tests.md
 
+- title: Flux Capacitor Tests (Solution)
+  statement: markdowns/04_solution.md
+
 - title: Time Display Library
-  statement: markdowns/05_time_disp_lib.md
+  statement: markdowns/05_time_disp.md
+
+- title: Time Display Library (Solution)
+  statement: markdowns/05_solution.md
 
 - title: Time machine executable
-  statement: markdowns/09_time_machine_exe.md
+  statement: markdowns/06_time_machine_exe.md
+
+- title: Time machine executable
+  statement: markdowns/06_solution.md
 
 - title: Functions
-  statement: markdowns/0x_functions.md
+  statement: markdowns/07_functions.md
+
+- title: Functions (Solution)
+  statement: markdowns/07_solution.md
+
+- title: Summary
+  statement: markdowns/summary.md
 
 - title: Resources
-  statement: markdowns/xx_end.md
+  statement: markdowns/resources.md
 
 projects:
   cpp:
