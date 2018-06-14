@@ -1,8 +1,8 @@
 # [project]/project_helper.cmake
 
-#
-#
-#
+# add_interface(<name> PACKAGE <package>
+#   [INCLUDES include...]
+# )
 #
 function(add_interface NAME)
   cmake_parse_arguments(IFACE "" "PACKAGE" "INCLUDES" ${ARGN})
@@ -13,9 +13,13 @@ function(add_interface NAME)
   target_include_directories(${NAME} INTERFACE ${IFACE_INCLUDES})
 endfunction(add_interface)
 
-#
-#
-#
+# add_component(<name> PACKAGE <package>
+#   SOURCES source...
+#   [INCLUDES include...]
+#   [SHARES dependency...]
+#   [USES dependency...]
+#   [TESTS test...]
+# )
 #
 function(add_component NAME)
   cmake_parse_arguments(COMP "" "PACKAGE" "INCLUDES;SOURCES;SHARES;TESTS;USES" ${ARGN})
@@ -54,9 +58,10 @@ function(add_component NAME)
   target_link_libraries(${NAME} PRIVATE project::settings)
 endfunction(add_component)
 
-#
-#
-#
+# add_application(<name> PACKAGE <package>
+#   SOURCES source...
+#   [COMPONENTS component...]
+# )
 #
 function(add_application NAME)
   cmake_parse_arguments(APP "" "PACKAGE" "SOURCES;COMPONENTS" ${ARGN})
