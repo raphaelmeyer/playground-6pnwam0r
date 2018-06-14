@@ -9,6 +9,7 @@ Include the tests as well.
 
 - **Library** `time_display`:
   - Alias target: `time_machine::time_display`
+
 - **Tests** `time_display-tests`:
   - Alias target: `tests::time_display`
   - Run target: `run-time_display-tests`

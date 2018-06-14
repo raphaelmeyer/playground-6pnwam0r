@@ -11,10 +11,12 @@ Add the following components to the project:
   - Sources:
     - `src/time_machine.cc`
     - `src/time_machine.h`
+
 - **Executable** `time_machine_app`:
   - Alias target: `time_machine::application`
   - Sources:
     - `src/main.cc`
+
 - **Tests** `time_machine-tests`:
   - Alias target: `tests::time_machine`
   - Run target: `run-time_machine-tests`

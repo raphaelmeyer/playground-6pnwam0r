@@ -3,9 +3,11 @@
 If you stick to certain rules how to structure your project then the CMake files can look very similar.
 Like duplicated code.
 
-Wouldn't it be nice if we could extract functions?
+Wouldn't it be nice if we could extract common code to [functions](https://cmake.org/cmake/help/v3.10/command/function.html)?
 
-[`function`](https://cmake.org/cmake/help/v3.10/command/function.html)
+That's exactly what we are going to do in the last exercise.
+But before we start, let's have a look at a few properties of the [CMake language](https://cmake.org/cmake/help/v3.10/manual/cmake-language.7.html).
+
 
 
 explain variables, scope ?
@@ -52,3 +54,6 @@ Write functions:
 - add_interface()
 - add_component()
 - add_application()
+
+
+@[Run CMake]({"stubs": ["07_functions/stubs/project_helper.cmake"], "command": "07_functions/check.sh"})
