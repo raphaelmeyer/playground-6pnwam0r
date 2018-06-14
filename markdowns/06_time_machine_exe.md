@@ -6,11 +6,18 @@ Now let us put everything together to build the time machine application.
 
 Add the following components to the project:
 
-- Library `time_machine` with alias target `time_machine::time_machine` and sources `src/time_machine.cc` `src/time_machine.h`
-
-- Executable `time_machine_app` with alias target `time_machine::application` and source file `src/main.cc`.
-
-- Tests `time_machine-tests` with alias target `tests::time_machine` and custom target `run-time_machine-tests` to run the tests.
+- **Library** `time_machine`:
+  - Alias target: `time_machine::time_machine`
+  - Sources:
+    - `src/time_machine.cc`
+    - `src/time_machine.h`
+- **Executable** `time_machine_app`:
+  - Alias target: `time_machine::application`
+  - Sources:
+    - `src/main.cc`
+- **Tests** `time_machine-tests`:
+  - Alias target: `tests::time_machine`
+  - Run target: `run-time_machine-tests`
 
 ::: Folder structure
 ```
