@@ -38,6 +38,25 @@ Implement these functions, so that the CMake files can be written as follows:
 - add_component()
 - add_application()
 
+::: [project]/CMakeLists.txt
+```
+# [project]/CMakeLists.txt
+
+cmake_minimum_required(VERSION 3.10)
+project("TimeMachine" VERSION 1.0.2 LANGUAGES CXX)
+
+include(project_helper.cmake)
+
+add_subdirectory(vendor)
+add_subdirectory(settings)
+
+add_subdirectory(time_travel_interface)
+add_subdirectory(flux_capacitor)
+add_subdirectory(time_display)
+add_subdirectory(time_machine)
+```
+:::
+
 ::: [project]/time_machine/CMakeLists.txt
 ```
 # [project]/time_machine/CMakeLists.txt

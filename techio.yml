@@ -43,9 +43,6 @@ plan:
 - title: Functions (Solution)
   statement: markdowns/07_solution.md
 
-- title: Summary
-  statement: markdowns/summary.md
-
 - title: Resources
   statement: markdowns/resources.md
 
