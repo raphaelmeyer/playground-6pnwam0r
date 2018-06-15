@@ -1,14 +1,14 @@
 # You did it!
 
-# Some Final Words
+## Some Final Words
 
 **Does**:
 - Use the commands
-  - target_include_directories
-  - target_link_libraries
-  - target_compile_definitions
-  - target_compile_features
-  - target_compile_options
+  - `target_include_directories`
+  - `target_link_libraries`
+  - `target_compile_definitions`
+  - `target_compile_features`
+  - `target_compile_options`
 - Always set `cmake_minimum_required`
 - Use `PRIVATE`, `INTERFACE` and `PUBLIC`
 - Use namespaced alias targets
