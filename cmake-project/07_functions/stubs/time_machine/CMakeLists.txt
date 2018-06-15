@@ -11,7 +11,7 @@ add_component(time_machine PACKAGE time_machine
   SOURCES
     src/time_machine.cc
   INCLUDES include
-  USES
+  USING
     time_machine::flux_capacitor
     time_machine::time_display
   TESTS

@@ -16,13 +16,13 @@ endfunction(add_interface)
 # add_component(<name> PACKAGE <package>
 #   SOURCES source...
 #   [INCLUDES include...]
-#   [SHARES dependency...]
-#   [USES dependency...]
+#   [USING dependency...]
+#   [SHARING dependency...]
 #   [TESTS test...]
 # )
 #
 function(add_component NAME)
-  cmake_parse_arguments(COMP "" "PACKAGE" "INCLUDES;SOURCES;SHARES;TESTS;USES" ${ARGN})
+  cmake_parse_arguments(COMP "" "PACKAGE" "INCLUDES;SOURCES;TESTS;USING;SHARING" ${ARGN})
 
   add_library(${NAME} ${COMP_SOURCES})
   add_library(${COMP_PACKAGE}::${NAME} ALIAS ${NAME})
@@ -31,12 +31,12 @@ function(add_component NAME)
     target_include_directories(${NAME} PUBLIC ${COMP_INCLUDES})
   endif()
 
-  if(DEFINED COMP_SHARES)
-    target_link_libraries(${NAME} PUBLIC ${COMP_SHARES})
+  if(DEFINED COMP_SHARING)
+    target_link_libraries(${NAME} PUBLIC ${COMP_SHARING})
   endif()
 
-  if(DEFINED COMP_USES)
-    target_link_libraries(${NAME} PRIVATE ${COMP_USES})
+  if(DEFINED COMP_USING)
+    target_link_libraries(${NAME} PRIVATE ${COMP_USING})
   endif()
 
   if(DEFINED COMP_TESTS)
@@ -48,7 +48,7 @@ function(add_component NAME)
     target_link_libraries(${NAME}-tests
       PRIVATE
         ${COMP_PACKAGE}::${NAME}
-        ${COMP_USES}
+        ${COMP_USING}
         project::settings
         catchorg::catch2
     )

@@ -6,7 +6,7 @@ add_component(time_display PACKAGE time_machine
     src/display.cc
     src/numbers.cc
   INCLUDES include
-  USES
+  USING
     time_machine::time_travel
   TESTS
     tests/colors.cc
