@@ -59,7 +59,7 @@ The library has three source files: `src/capacitor.cc`, `src/flux.cc` and `src/f
 
 The library is implementing the `time_travel` interface.
 It is used by the library and also part of its own public interface.
-So the `time_travel` interface is a **public** dependency.
+So the `time_machine::time_travel` interface is a **public** dependency.
 
 Also, don't forget to add the `project::settings` as a **private** dependency.
 

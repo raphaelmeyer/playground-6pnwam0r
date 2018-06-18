@@ -11,15 +11,25 @@ Add the following components to the project:
   - Sources:
     - `src/time_machine.cc`
     - `src/time_machine.h`
+  - Private dependencies:
+    - `time_machine::flux_capacitor`
+    - `time_machine::time_display`
 
 - **Executable** `time_machine_app`:
   - Alias target: `time_machine::application`
   - Sources:
     - `src/main.cc`
+  - Private dependencies:
+    - `time_machine::time_machine`
+    - `project::settings`
 
 - **Tests** `time_machine-tests`:
   - Alias target: `tests::time_machine`
   - Run target: `run-time_machine-tests`
+  - Private dependencies:
+    - `time_machine::time_machine`
+    - `catchorg::catch2`
+    - `project::settings`
 
 ::: Folder structure
 ```

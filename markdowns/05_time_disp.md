@@ -9,10 +9,18 @@ Include the tests as well.
 
 - **Library** `time_display`:
   - Alias target: `time_machine::time_display`
+  - Private dependencies:
+    - `time_machine::time_travel`
+    - `project::settings`
 
 - **Tests** `time_display-tests`:
   - Alias target: `tests::time_display`
   - Run target: `run-time_display-tests`
+  - Private dependencies:
+    - `time_machine::time_display`
+    - `time_machine::time_travel`
+    - `catchorg::catch2`
+    - `project::settings`
 
 ::: Folder structure
 ```
