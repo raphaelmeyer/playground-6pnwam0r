@@ -38,11 +38,11 @@ Add the following components to the project:
 +--- time_machine/
 |    +--- CMakeLists.txt
 |    +--- src/
-|    |    +--- CMakeLists.txt
 |    |    +--- main.cc
 |    |    +--- time_machine.cc
 |    |    +--- time_machine.h
 |    +--- tests/
+|    |    +--- CMakeLists.txt
 |         +--- time_machine.cc
 +--- ...
 ```
